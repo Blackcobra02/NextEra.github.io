@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NextERA — Final</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070a;--card:#001827;--accent:#00bcd4;--text:#e9eef2;--muted:#9aa7b0;--glow:0 10px 30px rgba(0,188,212,0.12);}
+body[lang="ar"]{--accent:#e04b4b;--glow:0 12px 30px rgba(224,75,75,0.12);}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;font-family:"Poppins",sans-serif;background:linear-gradient(180deg,var(--bg),#020214 140%);color:var(--text);overflow-x:hidden;transition:background 0.8s ease, color 0.6s ease;}
+header{position:fixed;left:0;right:0;top:12px;margin:0 auto;width:calc(100% - 40px);max-width:1200px;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(0,0,0,0.25);border-radius:14px;backdrop-filter: blur(8px);box-shadow:var(--glow);}
+#logo{font-weight:700;color:var(--accent);}
+nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+nav a{color:var(--text);text-decoration:none;font-weight:500;transition:color .25s}
+nav a:hover{color:var(--accent)}
+#lang-btn{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:8px 14px;border-radius:999px;font-weight:600;cursor:pointer;transition:all .35s;}
+#lang-btn:hover{background:var(--accent);color:#000}
+.hero{padding:160px 18px 100px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.hero-inner{max-width:980px;padding:40px;border-radius:20px;background:rgba(255,255,255,0.03);box-shadow:var(--glow);}
+.hero h1{font-size:44px;color:var(--accent);}
+.hero p{color:var(--muted);font-size:16px;line-height:1.6;}
+.controls{margin-top:28px;display:flex;gap:14px;justify-content:center;}
+.btn-primary{background:var(--accent);color:#000;border:none;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:10px 16px;border-radius:10px;cursor:pointer;}
+section.content{padding:70px 20px;max-width:1200px;margin:0 auto;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:18px;}
+.card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.4);}
+h2.section-title{color:var(--accent);font-size:22px}
+p.lead{color:var(--muted);}
+.overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(3,3,3,0.6);backdrop-filter: blur(6px);opacity:0;visibility:hidden;transition:opacity .35s ease;z-index:9999;}
+.overlay.open{opacity:1;visibility:visible}
+.modal{width:min(540px,94%);background:rgba(255,255,255,0.05);border-radius:16px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,0.7);}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:28px;background:var(--accent);color:#000;padding:12px 20px;border-radius:999px;font-weight:700;opacity:0;transition:opacity .3s;z-index:10001;}
+.toast.show{opacity:1}
+</style>
+</head>
+<body lang="en">
+
+<header>
+<div style="display:flex;gap:18px;align-items:center">
+<div id="logo">NextERA</div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+<button id="lang-btn">العربية</button>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<h1 id="hero-title">NextERA</h1>
+<p id="hero-desc">Empowering students globally with academic excellence.</p>
+<div class="controls">
+<button class="btn-primary" id="startBtn">START</button>
+<button class="btn-ghost" id="learnBtn">Learn more</button>
+</div>
+</div>
+</section>
+
+<section class="content" id="about">
+<h2 class="section-title" id="about-title">About Us</h2>
+<p class="lead" id="about-text">We provide all students with whatever academic assistance they need.<br><br>First, we can assist any national student who wants to transfer to an American university...<br><br>Second, for any university student who has an assignment, research, or project, we can help you complete it...<br><br>Third, if you're an American student, we can provide you with the most qualified teachers in all subjects...<br><br><strong>NextERA with you in every step.</strong></p>
+</section>
+
+<section class="content" id="services">
+<h2 class="section-title" id="services-title">Our Services</h2>
+<div class="cards" id="services-cards">
+<div class="card"><strong>American Diploma</strong><p>All schools will be available soon.</p></div>
+<div class="card"><strong>University Students / Undergraduate Students</strong><p>We provide assistance with all assignments, tasks, and projects related to your university major.</p></div>
+<div class="card"><strong>Teachers</strong><p>If you are a teacher who explains the EST, SAT, and ACT exam curricula, we offer you a wonderful job opportunity with our organization.</p></div>
+<div class="card"><strong>Business Strategy</strong><p>At NextEra Academy, we empower students, professionals, and entrepreneurs to think strategically and achieve measurable success.</p></div>
+</div>
+</section>
+
+<section class="content" id="contact">
+<h2 class="section-title" id="contact-title">Contact Info</h2>
+<p class="lead" id="contact-text">You can reach us via email: <strong>nextera6610@gmail.com</strong></p>
+</section>
+</main>
+
+<footer style="padding:40px 20px; text-align:center">
+<div id="footer-text">© 2025 NextERA. All rights reserved.</div>
+</footer>
+
+<div class="toast" id="toast">✔️ Sent successfully!</div>
+
+<script>
+const body=document.body,langBtn=document.getElementById('lang-btn'),toast=document.getElementById('toast');
+
+const translations={
+en:{
+nav:{home:'Home',about:'About',services:'Services',contact:'Contact'},
+logo:'NextERA',
+langBtn:'العربية',
+heroTitle:'NextERA',
+heroDesc:'Empowering students globally with academic excellence.',
+start:'START',learn:'Learn more',
+aboutTitle:'About Us',
+aboutText:'We provide all students with whatever academic assistance they need...\nFirst, we can assist any national student who wants to transfer to an American university...\nSecond, for any university student who has an assignment, research, or project, we can help you complete it...\nThird, if you\'re an American student, we can provide you with the most qualified teachers in all subjects...\nNextERA with you in every step.',
+servicesTitle:'Our Services',
+contactTitle:'Contact Info',
+contactText:'You can reach us via email: <strong>nextera6610@gmail.com</strong>',
+footer:'© 2025 NextERA. All rights reserved.',
+toast:'✔️ Sent successfully!'
+},
+ar:{
+nav:{home:'الرئيسية',about:'من نحن',services:'خدماتنا',contact:'تواصل'},
+logo:'نكست إيرا',
+langBtn:'English',
+heroTitle:'نكست إيرا',
+heroDesc:'نُمكّن الطلاب حول العالم لتحقيق التميز الأكاديمي.',
+start:'ابدأ',learn:'اعرف المزيد',
+aboutTitle:'من نحن',
+aboutText:'نحن نقدم الدعم الأكاديمي الكامل لجميع الطلاب في كل المراحل الدراسية...\nأولًا، يمكننا مساعدة أي طالب محلي يرغب في الانتقال إلى جامعة أمريكية...\nثانيًا، لأي طالب جامعي لديه بحث أو مشروع أو مهمة أكاديمية، يمكننا مساعدته في إنجازها على أكمل وجه...\nثالثًا، إذا كنت طالبًا في النظام الأمريكي، فنحن نوفر لك أفضل المعلمين في جميع المواد...\nنكست إيرا معك في كل خطوة.',
+servicesTitle:'خدماتنا',
+contactTitle:'معلومات التواصل',
+contactText:'يمكنك التواصل معنا عبر البريد الإلكتروني: <strong>nextera6610@gmail.com</strong>',
+footer:'© 2025 نكست إيرا. جميع الحقوق محفوظة.',
+toast:'✔️ تم الإرسال بنجاح!'
+}
+};
+
+function applyLang(lang){
+const t=translations[lang];
+body.lang=lang;
+document.getElementById('logo').textContent=t.logo;
+const navLinks=document.querySelectorAll('nav ul li a');
+navLinks[0].textContent=t.nav.home;
+navLinks[1].textContent=t.nav.about;
+navLinks[2].textContent=t.nav.services;
+navLinks[3].textContent=t.nav.contact;
+document.getElementById('hero-title').textContent=t.heroTitle;
+document.getElementById('hero-desc').textContent=t.heroDesc;
+document.getElementById('about-title').textContent=t.aboutTitle;
+document.getElementById('about-text').innerHTML=t.aboutText.replace(/\n/g,'<br><br>');
+document.getElementById('services-title').textContent=t.servicesTitle;
+document.getElementById('contact-title').textContent=t.contactTitle;
+document.getElementById('contact-text').innerHTML=t.contactText;
+document.getElementById('footer-text').textContent=t.footer;
+langBtn.textContent=t.langBtn;
+toast.textContent=t.toast;
+document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
+localStorage.setItem('siteLang',lang);
+}
+
+langBtn.addEventListener('click',()=>{
+const newLang=(body.lang==='en')?'ar':'en';
+applyLang(newLang);
+});
+
+window.addEventListener('DOMContentLoaded',()=>{
+applyLang(localStorage.getItem('siteLang')||'en');
+});
+</script>
+</body>
+</html>
